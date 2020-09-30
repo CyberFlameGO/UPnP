@@ -18,13 +18,7 @@
  */
 package com.dosse.upnp;
 
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.Inet4Address;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.NetworkInterface;
-import java.net.SocketTimeoutException;
+import java.net.*;
 import java.util.Enumeration;
 import java.util.LinkedList;
 
