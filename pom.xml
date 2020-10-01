@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>WaifUPnP</name>
     <groupId>org.cloudburstmc</groupId>
     <artifactId>WaifUPnP</artifactId>
     <version>1.1</version>
@@ -37,4 +38,18 @@
             <url>https://repo.nukkitx.com/snapshot</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <build>
+        <finalName>${project.name}</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
