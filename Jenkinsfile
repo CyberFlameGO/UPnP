@@ -10,12 +10,11 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean package -DskipTests'
             }
             post {
                 success {
-                    junit 'target/surefire-reports/**/*.xml'
-                    archiveArtifacts artifacts: 'target/WaifUPnP.jar', fingerprint: true
+                    archiveArtifacts artifacts: 'target/UPnP.jar', fingerprint: true
                 }
             }
         }
